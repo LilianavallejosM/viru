@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Virú Mágico | Turismo, Cultura y Gastronomía</title>
+
+<style>
+/* ================================
+   ESTILOS COMPLETOS INTEGRADOS
+================================ */
+:root{
+  --verde:#136f63;
+  --amarillo:#f4b41a;
+  --fondo:#f8f9fa;
+  --txt:#222;
+  --txt2:#666;
+  --radius:12px;
+  --shadow:0 10px 25px rgba(0,0,0,0.08);
+  --max:1100px;
+  font-family:system-ui;
+}
+body{margin:0;background:var(--fondo);color:var(--txt);line-height:1.6;}
+img{max-width:100%;display:block;}
+
+.container{width:90%;max-width:var(--max);margin:auto;}
+header{
+  background:#fff;position:sticky;top:0;z-index:100;
+  box-shadow:0 2px 10px rgba(0,0,0,.05);
+}
+nav ul{display:flex;list-style:none;gap:1rem;padding:0;margin:0;}
+nav a{
+  text-decoration:none;color:var(--txt2);padding:.4rem .6rem;border-radius:50px;transition:.3s;
+}
+nav a:hover{background:#eee;color:var(--verde);}
+nav a.active{background:var(--verde);color:#fff;}
+
+header .wrap{
+  display:flex;justify-content:space-between;align-items:center;padding:.8rem 0;
+}
+.logo{font-weight:900;font-size:1.4rem;color:var(--verde);}
+.logo span{color:var(--amarillo);}
+
+/* SECCIONES */
+section{padding:3rem 0;}
+section:nth-child(even){background:#fff;}
+
+h1,h2{margin-top:0}
+h2{text-align:center;margin-bottom:1rem;}
+
+.card{
+  background:#fff;padding:1rem;border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+.grid{display:grid;gap:1rem;}
+@media(min-width:750px){
+.grid3{grid-template-columns:repeat(3,1fr);}
+.grid2{grid-template-columns:repeat(2,1fr);}
+}
+
+.btn{
+  display:inline-block;padding:.7rem 1.2rem;border-radius:50px;
+  text-decoration:none;cursor:pointer;transition:.3s;font-weight:bold;
+}
+.btn.primary{background:var(--verde);color:#fff;}
+.btn.primary:hover{opacity:.9;}
+.btn.sec{border:1px solid var(--verde);color:var(--verde);}
+.btn.sec:hover{background:#e6fffa;}
+
+.video{position:relative;padding-bottom:56%;height:0;overflow:hidden;border-radius:var(--radius);box-shadow:var(--shadow);}
+.video iframe{position:absolute;width:100%;height:100%;}
+
+.galeria img{
+border-radius:var(--radius);
+box-shadow:var(--shadow);
+}
+
+table{
+width:100%;border-collapse:collapse;background:white;
+box-shadow:var(--shadow);border-radius:var(--radius);overflow:hidden;margin-top:1rem;
+}
+th,td{padding:.9rem;border-bottom:1px solid #eee;}
+th{background:#e6f5f2;}
+
+footer{
+background:#111;color:#fff;text-align:center;padding:1.5rem 0;margin-top:2rem;
+font-size:.9rem;
+}
+</style>
+</head>
+<body>
+
+<!-- ===========================
+        CABECERA / MENÚ
+=========================== -->
+<header>
+  <div class="container wrap">
+    <div class="logo">Virú <span>Mágico</span></div>
+    <nav>
+      <ul>
+        <li><a href="#inicio" class="active">Inicio</a></li>
+        <li><a href="#visitar">Qué visitar</a></li>
+        <li><a href="#gastronomia">Gastronomía</a></li>
+        <li><a href="#fiestas">Fiestas</a></li>
+        <li><a href="#formulario">Formulario</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ===========================
+            INICIO
+=========================== -->
+<section id="inicio">
+<div class="container">
+<h1>Virú, Valle Frutícola del Norte del Perú</h1>
+<p>
+Virú – La Libertad, es un destino lleno de vida. Su valle produce ciruela, mango, uva, palta y maracuyá; mientras que sus playas cercanas, su historia arqueológica y su gastronomía enamoran a quienes lo visitan.  
+Este sitio busca posicionar a <b>Virú como destino turístico internacional</b>.
+</p>
+
+<div class="video">
+<iframe src="https://www.youtube.com/embed/VIDEO_ID_AQUI" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<br>
+<a class="btn primary" onclick="abrirMapa()">📍 Ver Virú en Google Maps</a>
+</div>
+</section>
+
+<!-- ===========================
+         QUÉ VISITAR
+=========================== -->
+<section id="visitar">
+<div class="container">
+<h2>🌎 ¿Qué visitar en Virú?</h2>
+<p style="text-align:center">Rutas, naturaleza, agricultura, mar e historia.</p>
+
+<div class="grid grid3">
+<div class="card"><h3>Ruta del Valle Frutícola</h3><p>Recorre fundos agrícolas, cosecha de ciruela (enero-marzo), uva, palta, mango y maracuyá. Turismo vivencial con productores locales.</p></div>
+<div class="card"><h3>Ruta Histórica</h3><p>Visita <b>Huaca El Castillo de Tomabal</b>, plaza de Virú e iglesia. Patrimonio Mochica/Chimú.</p></div>
+<div class="card"><h3>Ruta de Mar y Naturaleza</h3><p>Playas cercanas como <b>Puerto Morín</b> y conexión con Huanchaco. Avistamiento de aves en desembocadura del río.</p></div>
+</div>
+
+<h3 style="margin-top:2rem;text-align:center">Resumen Turístico</h3>
+<table>
+<tr><th>Ruta</th><th>Atractivos</th></tr>
+<tr><td>Valle Frutícola</td><td>Fundos, cosecha, frutas exportación.</td></tr>
+<tr><td>Histórica</td><td>Huaca Tomabal, Plaza, Iglesia.</td></tr>
+<tr><td>Mar y Río</td><td>Puerto Morín, pesca artesanal, fotografía.</td></tr>
+</table>
+</div>
+</section>
+
+<!-- ===========================
+         GASTRONOMÍA
+=========================== -->
+<section id="gastronomia">
+<div class="container">
+<h2>🍽 Gastronomía de Virú</h2>
+<p style="text-align:center">Sabores del campo y mar, tradición y fruta emblema: <b>Ciruela de Virú</b>.</p>
+
+<div class="grid grid3">
+<div class="card"><h3>Platos Típicos</h3><p>Pepián de cuy, sudado de pescado, caldo de gallina, tamales, picante de gallina, chicharrón con mote.</p></div>
+<div class="card"><h3>Dulces</h3><p>Dulce de ciruela, manjar, helados naturales de mango/maracuyá.</p></div>
+<div class="card"><h3>Experiencias</h3><p>Mercados, <b>Feria de la Ciruela</b>, jugos frescos, sazón tradicional.</p></div>
+</div>
+
+<h3 style="text-align:center;margin-top:2rem">Galería de Sabores</h3>
+<div class="grid grid3 galeria">
+<img src="https://via.placeholder.com/300x200?text=Pepian+de+Cuy">
+<img src="https://via.placeholder.com/300x200?text=Tamales+Viru">
+<img src="https://via.placeholder.com/300x200?text=Dulce+de+Ciruela">
+</div>
+</div>
+</section>
+
+<!-- ===========================
+         FIESTAS
+=========================== -->
+<section id="fiestas">
+<div class="container">
+<h2>🎉 Fiestas y Tradiciones de Virú</h2>
+<p style="text-align:center">Identidad, danza, fe y cultura viva.</p>
+
+<table>
+<tr><th>Fiesta</th><th>Mes</th><th>Actividades</th></tr>
+<tr><td>Fiesta Patronal de San José</td><td>Marzo</td><td>Procesiones, danzas, ferias, concursos, bandas.</td></tr>
+<tr><td>Feria de la Ciruela</td><td>Enero-Febrero</td><td>Degustaciones, dulces, <b>Los Negritos</b>, artesanías.</td></tr>
+<tr><td>Fiestas Marianas</td><td>Diciembre</td><td>Procesiones, carros alegóricos, misas.</td></tr>
+<tr><td>Danza Los Negritos</td><td>Todo el año</td><td>Tradición con tambor y quijada.</td></tr>
+</table>
+
+<h3 style="text-align:center;margin-top:2rem">Galería Festiva</h3>
+<div class="grid grid3 galeria">
+<img src="https://via.placeholder.com/300x200?text=Los+Negritos">
+<img src="https://via.placeholder.com/300x200?text=Feria+Ciruela">
+<img src="https://via.placeholder.com/300x200?text=Fiesta+San+Jose">
+</div>
+</div>
+</section>
+
+<!-- ===========================
+         FORMULARIO
+=========================== -->
+<section id="formulario">
+<div class="container">
+<h2>📝 Tu opinión nos ayuda</h2>
+<p style="text-align:center">Responde el formulario para mejorar la web y aportar ideas.</p>
+
+<a class="btn sec" href="https://docs.google.com/forms/d/e/ID_DE_TU_FORMULARIO/viewform" target="_blank">Abrir Formulario</a>
+
+<br><br>
+<div class="video">
+<iframe src="https://docs.google.com/forms/d/e/ID_DE_TU_FORMULARIO/viewform?embedded=true"></iframe>
+</div>
+</div>
+</section>
+
+<footer>
+<p>© 2025 Virú Mágico — Sitio creado para promover el turismo en Virú</p>
+</footer>
+
+<script>
+function abrirMapa(){
+window.open("https://www.google.com/maps/search/?api=1&query=Viru,+La+Libertad,+Peru","_blank");
+}
+</script>
+</body>
+</html>
